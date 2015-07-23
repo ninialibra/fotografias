@@ -53,12 +53,12 @@ angular.module('fotografiasApp', ['ionic', 'fotografiasApp.controllers', 'fotogr
     }
   })
 
-  .state('tab.chats', {
-    url: '/chats',
+  .state('tab.cart', {
+    url: '/cart',
     views: {
-      'tab-chats': {
-        templateUrl: 'templates/tab-chats.html',
-        controller: 'ChatsCtrl'
+      'tab-cart': {
+        templateUrl: 'templates/tab-cart.html',
+        controller: 'CartCtrl'
       }
     }
   })

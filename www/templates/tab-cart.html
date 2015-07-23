@@ -1,0 +1,19 @@
+<ion-view view-title="Carrito">
+  <ion-nav-buttons side="left">
+    <i class="button button-icon button-clear ion-minus-circled" ng-click="showBorrar()"></i>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <i class="button button-icon button-clear ion-power" ng-click="salir()"></i>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list show-delete="bBorrar">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <img ng-src="{{chat.face}}">
+        <h2>{{chat.name}}</h2>
+        <p>{{chat.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+        <ion-delete-button class="ion-minus-circled" ng-click="items.splice($index, 1)"></ion-delete-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
